@@ -1,9 +1,13 @@
-import { Stack } from '@mantine/core';
+import { AboutMe, Articles, ContactMe, Home, Container, Works } from 'components';
 
 const HomePage = () => (
-  <Stack>
-    <h1>Dálcio Garcia</h1>
-  </Stack>
+  <Container>
+    <Home />
+    <AboutMe />
+    <Works />
+    <Articles />
+    <ContactMe />
+  </Container>
 );
 
 export default HomePage;

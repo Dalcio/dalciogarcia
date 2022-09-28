@@ -6,7 +6,13 @@ type TLayout = {
 };
 
 const useLayoutStyles = createStyles(() => ({
-  root: {},
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    paddingTop: '100vh',
+    position: 'relative',
+    zIndex: 1,
+  },
 }));
 
 const Layout = ({ children }: TLayout) => {

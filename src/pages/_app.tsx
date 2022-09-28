@@ -1,5 +1,4 @@
 import { ColorScheme, MantineProvider } from '@mantine/core';
-import Layout from 'layout';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import theme from 'theme';
@@ -22,9 +21,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         withNormalizeCSS
       >
         <GlobalStyles />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </MantineProvider>
     </>
   );
