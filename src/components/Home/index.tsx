@@ -1,8 +1,17 @@
-import { createStyles, Stack, Text, Title } from '@mantine/core';
+import { createStyles, Image, keyframes, Stack, Text, Title } from '@mantine/core';
 import { content } from 'data';
 import { Row } from 'theme/restyled';
 import DalcioCharacter from './DalcioCharacter';
 import VSCode from './VSCode';
+
+const universe = keyframes({
+  from: {
+    transform: 'scale(1)',
+  },
+  to: {
+    transform: 'scale(4)',
+  },
+});
 
 const useCoverStyles = createStyles((theme) => ({
   wrapper: {
@@ -21,6 +30,8 @@ const useCoverStyles = createStyles((theme) => ({
     width: 'min(100%, 1240px)',
     alignItems: 'center',
     justifyContent: 'center',
+    position: 'relative',
+    zIndex: 1,
   },
   intro: {
     width: '400px',
@@ -34,6 +45,16 @@ const useCoverStyles = createStyles((theme) => ({
       bottom: '-200px',
     },
   },
+  bg: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    right: 0,
+    objectFit: 'cover',
+    opacity: 0.2,
+    animation: `${universe} 30s ease-in-out infinite alternate`,
+  },
 }));
 
 const Home = () => {
@@ -41,6 +62,7 @@ const Home = () => {
 
   return (
     <div className={classes.wrapper}>
+      <Image src="/images/stars.jpg" alt="universe" className={classes.bg} />
       <Stack className={classes.container}>
         <DalcioCharacter />
         <Title>Dálcio Garcia</Title>
