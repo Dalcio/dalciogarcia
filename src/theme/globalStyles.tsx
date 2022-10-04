@@ -11,6 +11,28 @@ const GlobalStyles = () => (
 
       body: {
         ...fn.fontStyles(),
+        color: 'white',
+      },
+
+      '*::-webkit-scrollbar': {
+        width: '10px',
+      },
+
+      '*::-webkit-scrollbar-track': {
+        borderTopRightRadius: '5px',
+        borderBottomRightRadius: '5px',
+        background: '#c9cacc',
+      },
+
+      '*::-webkit-scrollbar-track:hover': {
+        background: '#78797a',
+      },
+      '*::-webkit-scrollbar-thumb': {
+        background: 'white',
+      },
+
+      '.scroll-bar::-webkit-scrollbar-thumb:hover': {
+        background: '#01143b',
       },
     })}
   />

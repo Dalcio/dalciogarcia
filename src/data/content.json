@@ -1,0 +1,14 @@
+{
+  "home": {
+    "name": "Dálcio Garcia",
+    "intro": "I'm a Software Engineer passionate about creating the front end of web and mobile apps"
+  },
+  "about-me": {
+    "name": "Dálcio Garcia",
+    "description": "Dálcio is a creative junior Software Engineer, with 1+ years of experiences."
+  },
+  "contacts": {
+    "linkedin": "https://linkedin.com/in/dalcio-garcia/",
+    "github": "https://github.com/dalcio"
+  }
+}

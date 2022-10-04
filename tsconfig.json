@@ -17,6 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "api/*": ["src/api/*"],
+      "data": ["src/data"],
+      "data/*": ["src/data/*"],
       "components": ["src/components"],
       "components/*": ["src/components/*"],
       "constants": ["src/constants"],

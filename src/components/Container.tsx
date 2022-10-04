@@ -5,24 +5,28 @@ type TLayout = {
   children: JSX.Element[] | JSX.Element;
 };
 
-const useLayoutStyles = createStyles(() => ({
+const useLayoutStyles = createStyles((theme) => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
-    paddingTop: '100vh',
+    marginTop: '100vh',
     position: 'relative',
     zIndex: 1,
+    backgroundColor: theme.colors.bg[1],
+  },
+  container: {
+    width: 'min(100%, 1240px)',
   },
 }));
 
-const Layout = ({ children }: TLayout) => {
+const Container = ({ children }: TLayout) => {
   const { classes } = useLayoutStyles();
 
   return (
     <div className={classes.root}>
-      <Stack>{children}</Stack>
+      <Stack className={classes.container}>{children}</Stack>
     </div>
   );
 };
 
-export default Layout;
+export default Container;

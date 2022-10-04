@@ -1,0 +1,23 @@
+[
+	{
+		"id": 0,
+		"name": "Building A PWA With NextJS and Typescript",
+		"date": "May 23, 2022",
+		"desc": "Are you tired of building the same app thing twice or even more? What if I tell and so you one way that can help you save time and a lot of effort?...",
+		"link": "https://dev.to/dalcio/building-a-pwa-with-nextjs-and-typescript-4kf3"
+	},
+	{
+		"id": 1,
+		"name": "Context API & State Managers",
+		"date": "May 25, 2022",
+		"desc": "Por alguma razão bibliotecas como Redux são construidas usando Context API. E quando alguém no mundo React passa a conhecer ferramentas como Context API, Redux, Zustand, Recoil e por aí, muita das vezes fica preso...",
+		"link": "https://dev.to/dalcio/context-api-state-managers-2k45"
+	},
+	{
+		"id": 2,
+		"name": "Context API & State Managers",
+		"date": "MMay 25, 2022",
+		"desc": "For some reason libraries like Redux are built using Context API. And when someone in the React world gets to know tools like Context API, Redux, Zustand, Recoil and so on, a lot of times they get stuck...",
+		"link": "https://dev.to/dalcio/context-api-state-managers-9m0"
+	}
+]
