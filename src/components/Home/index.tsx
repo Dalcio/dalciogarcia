@@ -1,7 +1,7 @@
 import { createStyles, Stack, Text, Title } from '@mantine/core';
 import { content } from 'data';
 import { Row } from 'theme/restyled';
-import Avatar from './Avatar';
+import DalcioCharacter from './DalcioCharacter';
 import VSCode from './VSCode';
 
 const useCoverStyles = createStyles((theme) => ({
@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <div className={classes.wrapper}>
       <Stack className={classes.container}>
-        <Avatar />
+        <DalcioCharacter />
         <Title>Dálcio Garcia</Title>
         <Text className={classes.intro}>{content.home.intro}</Text>
         <Row justify="space-around">
