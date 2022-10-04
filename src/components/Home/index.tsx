@@ -26,6 +26,14 @@ const useCoverStyles = createStyles((theme) => ({
     width: '400px',
     textAlign: 'center',
   },
+  vscode: {
+    width: `min(calc(100% - ${0 * theme.spacing.lg}px), 760px)`,
+
+    [theme.fn.smallerThan('sm')]: {
+      position: 'absolute',
+      bottom: '-200px',
+    },
+  },
 }));
 
 const Home = () => {
@@ -45,7 +53,7 @@ const Home = () => {
             li
           </a>
         </Row>
-        <VSCode />
+        <VSCode className={classes.vscode} />
       </Stack>
     </div>
   );

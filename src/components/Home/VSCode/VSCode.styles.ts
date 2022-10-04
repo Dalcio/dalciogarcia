@@ -77,6 +77,18 @@ export const useVSCodeStyles = createStyles((theme) => ({
   coding: {
     overflowY: 'auto',
     height: '300px',
+
+    '&::-webkit-scrollbar': {
+      width: '4px',
+    },
+
+    '&::-webkit-scrollbar-track': {
+      background: 'white',
+    },
+
+    '&::-webkit-scrollbar-thumb': {
+      background: '#103153',
+    },
   },
 
   type: {},
