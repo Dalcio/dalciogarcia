@@ -11,7 +11,7 @@ export default class _Document extends Document {
       <Html>
         <Head>
           <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/dalcio.svg" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link

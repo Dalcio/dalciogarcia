@@ -11,21 +11,16 @@ const Code = ({ className, width, d, cb, ...rest }: CodeProps) => {
   const delay = d * 1000 - 200;
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
-
     if (display === 'none') {
-      timeout = setTimeout(() => {
+      setTimeout(() => {
         setVisible('block');
-
-        if (cb) cb();
+        cb && cb();
       }, delay);
     } else {
-      timeout = setTimeout(() => {
+      setTimeout(() => {
         setVisible('none');
       }, LAST_TIME - delay);
     }
-
-    return () => clearTimeout(timeout);
   }, [display]);
 
   return (
