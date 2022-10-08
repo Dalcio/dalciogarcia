@@ -1,8 +1,5 @@
-import { Button, createStyles, Image, Stack, Tabs, Text, Title } from '@mantine/core';
-import SocialNetWorks, { LetsTalk } from 'components/Social';
-import { content } from 'data';
-import { Row } from 'theme/restyled';
-import SectionHeader from '../SectionHeader';
+import { createStyles, Stack } from '@mantine/core';
+import SectionTitle from '../SecrionTitle';
 
 const useAboutMeStyles = createStyles((theme) => ({
   root: {
@@ -40,7 +37,7 @@ const AboutMe = () => {
 
   return (
     <div className={`inner-root ${classes.root}`}>
-      <SectionHeader title="About Me" showBtn={false} />
+      <SectionTitle title="About Me" />
       <div className={`inner-container ${classes.container}`}>
         {/* <div className="title">
           <Title>Dálcio Garcia</Title>

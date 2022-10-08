@@ -3,7 +3,7 @@ import React from 'react';
 
 const GlobalStyles = () => (
   <Global
-    styles={({ fn }: MantineTheme) => ({
+    styles={({ fn, colors }: MantineTheme) => ({
       '*, *::before, *::after': {
         boxSizing: 'border-box',
         margin: 0,
@@ -33,6 +33,11 @@ const GlobalStyles = () => (
 
       '.scroll-bar::-webkit-scrollbar-thumb:hover': {
         background: '#01143b',
+      },
+
+      a: {
+        textDecoration: 'unset',
+        color: colors.primary[0],
       },
     })}
   />
