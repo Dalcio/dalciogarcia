@@ -66,12 +66,11 @@ const AboutMe = () => {
         title="About Me"
         titleDesc={
           <Text align="center" className="self-intro">
-            I&asp;m <strong>I am Dálcio Garcia</strong>
-            {content['about-me'].description}
+            <strong>I am Dálcio Garcia</strong> a{content['about-me'].description}
           </Text>
         }
       >
-        <Stack align="start">
+        <Stack align="center">
           <ArticleCard
             row={
               <Row>
