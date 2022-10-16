@@ -103,17 +103,5 @@
     "desc": "To Do is a task management app to help you stay organized and manage your day-to-day",
     "github": "https://github.com/Dalcio/beautiful-to-do",
     "live": "http://beautiful-to-do.vercel.app/"
-  },
-  {
-    "id": 20,
-    "date": "development",
-    "cover": "/desktop-preview.jpg",
-    "name": "Task Tracker",
-    "platform": "web",
-    "role": "I was responsible for the hole project",
-    "stack": "Next JS, Typescript, Jotai, Mantine UI, ...",
-    "desc": "A task tracker is a system that helps you make sure no tasks slip through the cracks with everything you have to do in a day.",
-    "github": "https://github.com/Dalcio/new-task-tracker",
-    "live": "https://new-task-tracker.vercel.app/"
   }
 ]
