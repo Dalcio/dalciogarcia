@@ -7,7 +7,6 @@ type TLayout = {
 
 const useLayoutStyles = createStyles((theme) => ({
   root: {
-    marginTop: '100vh',
     position: 'relative',
     zIndex: 1,
     backgroundColor: theme.colors.bg[1],

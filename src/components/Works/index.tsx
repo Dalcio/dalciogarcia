@@ -1,7 +1,7 @@
-import { Box, Button, Card, createStyles, Image, SimpleGrid, Stack, Tabs } from '@mantine/core';
+import { Button, createStyles, SimpleGrid, Stack, Tabs } from '@mantine/core';
 import { GitHubLogoIcon } from '@modulz/radix-icons';
 import { content } from 'data';
-import SectionTitle from '../SecrionTitle';
+import SectionTitle from '../SectionTitle';
 import { ProjectCard, StyledTabs } from './Works.components';
 import { useWorks } from './Works.hooks';
 

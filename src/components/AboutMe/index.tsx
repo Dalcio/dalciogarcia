@@ -1,33 +1,27 @@
-import { createStyles, Stack } from '@mantine/core';
-import SectionTitle from '../SecrionTitle';
+import { createStyles, Stack, Text } from '@mantine/core';
+import { content } from 'data';
+import SectionTitle from '../SectionTitle';
 
 const useAboutMeStyles = createStyles((theme) => ({
   root: {
     background: theme.white,
     color: theme.black,
+
+    '.section-title': {
+      paddingTop: '0px!important',
+    },
   },
   container: {
     position: 'relative',
     paddingBottom: 4 * theme.spacing.xl,
-  },
-  imageContainer: {
-    // position: 'absolute',
-    // height: '100vh!important',
-    right: 0,
-    // overflow: 'hidden',
 
-    [theme.fn.smallerThan('sm')]: {
-      // borderRadius: '100%!important',
+    '.self-intro': {
+      width: `min(calc(100% - ${2 * theme.spacing.lg}px), 400px)`,
     },
   },
+  imageContainer: {},
   aboutContainer: {
     width: '100%',
-  },
-  tabsContainer: {
-    flexGrow: 1,
-  },
-  tabPanel: {
-    // height: '100%',
   },
 }));
 
@@ -37,9 +31,16 @@ const AboutMe = () => {
   return (
     <div className={`inner-root ${classes.root}`}>
       <div className={`inner-container ${classes.container}`}>
-        <SectionTitle title="About Me" />
+        <SectionTitle
+          title="About Me"
+          desc={
+            <Text align="center" className="self-intro">
+              I&asp;m <strong>I am Dálcio Garcia</strong>
+              {content['about-me'].description}
+            </Text>
+          }
+        />
         {/* <div className="title">
-          <Title>Dálcio Garcia</Title>
         </div>
         <Row align="center" className="contacts">
           <SocialNetWorks />

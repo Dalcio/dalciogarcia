@@ -1,6 +1,6 @@
 import { Box, createStyles, SimpleGrid, Text } from '@mantine/core';
 import { articles } from 'data';
-import SectionTitle from './SecrionTitle';
+import SectionTitle from './SectionTitle';
 
 type ArticleCardProps = {
   desc: string;
