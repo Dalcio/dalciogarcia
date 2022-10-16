@@ -5,7 +5,16 @@
   },
   "about-me": {
     "name": "Dálcio Garcia",
-    "description": "Dálcio is a creative junior Software Engineer, with 1+ years of experiences."
+    "description": "a creative junior Software Engineer, with 1+ years of experiences.",
+    "my-techs": "Most of my time I use to develop my solutions with the following technologies",
+    "services": "my-services",
+    "education": {
+      "institute": "Institute of Technology and Science - ISPTEC",
+      "date": "from 2017 - now",
+      "desc": "",
+      "course": "Computer Engineer",
+      "link": "https://isptec.co.ao"
+    }
   },
   "contacts": {
     "linkedin": "https://linkedin.com/in/dalcio-garcia/",

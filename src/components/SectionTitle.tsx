@@ -28,6 +28,10 @@ const SectionTitle = ({ title, desc }: SectionHeaderProps) => {
       sx={(theme) => ({
         paddingTop: 4 * theme.spacing.xl,
         paddingBottom: 2 * theme.spacing.xl,
+
+        strong: {
+          color: theme.colors.primary[0],
+        },
       })}
       className="section-title"
     >
@@ -39,7 +43,7 @@ const SectionTitle = ({ title, desc }: SectionHeaderProps) => {
           })}
         >
           {' '}
-          {brokenTitle[1]}
+          {brokenTitle.slice(1).join(' ')}
         </Title>
       </Row>
       {desc && desc}

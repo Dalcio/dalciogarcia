@@ -12,6 +12,7 @@ const GlobalStyles = () => (
       body: {
         ...fn.fontStyles(),
         color: 'white',
+        overflowX: 'hidden',
       },
 
       '*::-webkit-scrollbar': {
