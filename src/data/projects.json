@@ -1,110 +1,119 @@
 [
-	{
-		"id": 0,
-		"name": "Easy Bank Challenge",
-		"cover": "https://raw.githubusercontent.com/Dalcio/easy-bank/main/screnshots/cover.png",
-		"platform": "Responsive Web Site",
-		"role": "I built the hole landing page",
-		"stack": "Angular, Typescript",
-		"desc": "This is a solution to the Easybank landing page challenge on Frontend Mentor",
-		"github": "https://github.com/Dalcio/easy-bank",
-		"live": "https://easy-bank-tau.vercel.app/"
-	},
-	{
-		"id": 1,
-		"cover": "https://raw.githubusercontent.com/Dalcio/launch-countdown-timer/main/screenshots/countdown-timer.png",
-		"name": "Launch Countdown Timer",
-		"role": "I was responsible for the hole front-end of the project",
-		"stack": "Angular, Typescript",
-		"desc": "A countdown timer is a virtual clock that counts down from a certain number or date to indicate the beginning or end of an event or offer.",
-		"github": "https://github.com/Dalcio/launch-countdown-timer",
-		"live": "https://launch-countdown-timer-nine-tau.vercel.app/"
-	},
-	{
-		"id": 2,
-		"cover": "https://raw.githubusercontent.com/Dalcio/static-job-listings/main/screenshots/cover.png",
-		"name": "Job listings with filtering solution",
-		"role": "I built the Frontend for filtering jobs",
-		"stack": "Angular, Typescript",
-		"desc": "Filter the jobs by category",
-		"github": "https://github.com/Dalcio/static-job-listings.git",
-		"live": "https://static-job-listings-umber.vercel.app/"
-	},
-	{
-		"id": 3,
-		"date": "August 29, 2022 - August 29, 2022",
-		"cover": "https://raw.githubusercontent.com/Dalcio/rock-paper-scissors/main/screenshots/desktop-home-preview.png",
-		"name": "Rock, Paper, Scissors, Lizard and Spock",
-		"role": "I built this game",
-		"stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
-		"desc": "Rock Paper Scissors Lizard Spock is an extension of the classic game of chance, Rock Paper Scissors, created by Sam Kass and Karen Bryla.",
-		"github": "https://github.com/Dalcio/rock-paper-scissors",
-		"live": "https://rock-paper-scissors-flax-eight.vercel.app/"
-	},
-	{
-		"id": 4,
-		"date": "September 01, 2022 - September 02, 2022",
-		"cover": "https://raw.githubusercontent.com/Dalcio/advice-generator-app/main/screenshots/desktop-preview.png",
-		"name": "Advice Generator App",
-		"role": "I built this advice generator consuming the Advice Slip JSON API",
-		"stack": "Next JS, Typescript, Stiches",
-		"desc": "Advice Generator App allows the user to see random advice",
-		"github": "https://github.com/Dalcio/advice-generator-app",
-		"live": "https://get-advice.vercel.app/"
-	},
-	{
-		"id": 5,
-		"date": "September 07, 2022 - September 09, 2022",
-		"cover": "https://raw.githubusercontent.com/Dalcio/world-nations-info/main/screenshots/desktop-preview.png",
-		"name": "World's Nation Information",
-		"role": "I've created this platform to get information about the nations in the world consuming rest countries api",
-		"stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
-		"desc": "World's Nation Info is a platform where we can get some information's about an specific country in the world such as the name of the country, their capital or capitals, their top level domain, the population size and more..",
-		"github": "https://github.com/Dalcio/world-nations-info",
-		"live": "https://world-nations-info.vercel.app/"
-	},
-	{
-		"id": 6,
-		"date": "September 10, 2022 - September 17, 2022",
-		"cover": "https://raw.githubusercontent.com/Dalcio/url-shortening/main/screenshots/visible-part.png",
-		"name": "WUrl Shortening",
-		"role": "I've created this platform to get information about the nations in the world consuming rest countries api",
-		"stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
-		"desc": "Shortify your link in a click with url shortening..",
-		"github": "https://github.com/Dalcio/url-shortening",
-		"live": "https://link-shortening.vercel.app/"
-	},
-	{
-		"id": 7,
-		"date": "September 19, 2022 - September 24, 2022",
-		"cover": "https://raw.githubusercontent.com/Dalcio/track-this-ip-address/main/screenshots/desktop.png",
-		"name": "IP Address Tracker",
-		"role": "I've created this platform to get information about the nations in the world consuming rest countries api",
-		"stack": "Next JS, Typescript, Stiches, Leaflet ...",
-		"desc": "Find everything about your ip or domain in a seconds including your location inreal time.",
-		"github": "https://github.com/Dalcio/track-this-ip-address",
-		"live": "https://track-this-ip-address.vercel.app/"
-	},
-	{
-		"id": 8,
-		"date": "",
-		"cover": "https://raw.githubusercontent.com/Dalcio/beautiful-to-do/main/screenshots/cover.png",
-		"name": "Beautiful Todo App",
-		"role": "I've created this platform to get information about the nations in the world consuming rest countries api",
-		"stack": "Next JS, Typescript, Zustand, Mantine UI, Beautiful React Drag and Drop ...",
-		"desc": "To Do is a task management app to help you stay organized and manage your day-to-day",
-		"github": "https://github.com/Dalcio/beautiful-to-do",
-		"live": "http://beautiful-to-do.vercel.app/"
-	},
-	{
-		"id": 20,
-		"date": "development",
-		"cover": "/desktop-preview.jpg",
-		"name": "Task Tracker",
-		"role": "I was responsible for the hole project",
-		"stack": "Next JS, Typescript, Jotai, Mantine UI, ...",
-		"desc": "A task tracker is a system that helps you make sure no tasks slip through the cracks with everything you have to do in a day.",
-		"github": "https://github.com/Dalcio/new-task-tracker",
-		"live": "https://new-task-tracker.vercel.app/"
-	}
+  {
+    "id": 0,
+    "name": "Easy Bank Challenge",
+    "cover": "https://raw.githubusercontent.com/Dalcio/easy-bank/main/screnshots/cover.png",
+    "platform": "web",
+    "role": "I built the hole landing page",
+    "stack": "Angular, Typescript",
+    "desc": "This is a solution to the Easybank landing page challenge on Frontend Mentor",
+    "github": "https://github.com/Dalcio/easy-bank",
+    "live": "https://easy-bank-tau.vercel.app/"
+  },
+  {
+    "id": 1,
+    "cover": "https://raw.githubusercontent.com/Dalcio/launch-countdown-timer/main/screenshots/countdown-timer.png",
+    "name": "Launch Countdown Timer",
+    "platform": "web",
+    "role": "I was responsible for the hole front-end of the project",
+    "stack": "Angular, Typescript",
+    "desc": "A countdown timer is a virtual clock that counts down from a certain number or date to indicate the beginning or end of an event or offer.",
+    "github": "https://github.com/Dalcio/launch-countdown-timer",
+    "live": "https://launch-countdown-timer-nine-tau.vercel.app/"
+  },
+  {
+    "id": 2,
+    "cover": "https://raw.githubusercontent.com/Dalcio/static-job-listings/main/screenshots/cover.png",
+    "name": "Job listings with filtering solution",
+    "platform": "web",
+    "role": "I built the Frontend for filtering jobs",
+    "stack": "Angular, Typescript",
+    "desc": "Filter the jobs by category",
+    "github": "https://github.com/Dalcio/static-job-listings.git",
+    "live": "https://static-job-listings-umber.vercel.app/"
+  },
+  {
+    "id": 3,
+    "date": "August 29, 2022 - August 29, 2022",
+    "cover": "https://raw.githubusercontent.com/Dalcio/rock-paper-scissors/main/screenshots/desktop-home-preview.png",
+    "name": "Rock, Paper, Scissors, Lizard and Spock",
+    "platform": "web",
+    "role": "I built this game",
+    "stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
+    "desc": "Rock Paper Scissors Lizard Spock is an extension of the classic game of chance, Rock Paper Scissors, created by Sam Kass and Karen Bryla.",
+    "github": "https://github.com/Dalcio/rock-paper-scissors",
+    "live": "https://rock-paper-scissors-flax-eight.vercel.app/"
+  },
+  {
+    "id": 4,
+    "date": "September 01, 2022 - September 02, 2022",
+    "cover": "https://raw.githubusercontent.com/Dalcio/advice-generator-app/main/screenshots/desktop-preview.png",
+    "name": "Advice Generator App",
+    "platform": "web",
+    "role": "I built this advice generator consuming the Advice Slip JSON API",
+    "stack": "Next JS, Typescript, Stiches",
+    "desc": "Advice Generator App allows the user to see random advice",
+    "github": "https://github.com/Dalcio/advice-generator-app",
+    "live": "https://get-advice.vercel.app/"
+  },
+  {
+    "id": 5,
+    "date": "September 07, 2022 - September 09, 2022",
+    "cover": "https://raw.githubusercontent.com/Dalcio/world-nations-info/main/screenshots/desktop-preview.png",
+    "name": "World's Nation Information",
+    "platform": "web",
+    "role": "I've created this platform to get information about the nations in the world consuming rest countries api",
+    "stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
+    "desc": "World's Nation Info is a platform where we can get some information's about an specific country in the world such as the name of the country, their capital or capitals, their top level domain, the population size and more..",
+    "github": "https://github.com/Dalcio/world-nations-info",
+    "live": "https://world-nations-info.vercel.app/"
+  },
+  {
+    "id": 6,
+    "date": "September 10, 2022 - September 17, 2022",
+    "cover": "https://raw.githubusercontent.com/Dalcio/url-shortening/main/screenshots/visible-part.png",
+    "name": "WUrl Shortening",
+    "platform": "web",
+    "role": "I've created this platform to get information about the nations in the world consuming rest countries api",
+    "stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
+    "desc": "Shortify your link in a click with url shortening..",
+    "github": "https://github.com/Dalcio/url-shortening",
+    "live": "https://link-shortening.vercel.app/"
+  },
+  {
+    "id": 7,
+    "date": "September 19, 2022 - September 24, 2022",
+    "cover": "https://raw.githubusercontent.com/Dalcio/track-this-ip-address/main/screenshots/desktop.png",
+    "name": "IP Address Tracker",
+    "platform": "web",
+    "role": "I've created this platform to get information about the nations in the world consuming rest countries api",
+    "stack": "Next JS, Typescript, Stiches, Leaflet ...",
+    "desc": "Find everything about your ip or domain in a seconds including your location inreal time.",
+    "github": "https://github.com/Dalcio/track-this-ip-address",
+    "live": "https://track-this-ip-address.vercel.app/"
+  },
+  {
+    "id": 8,
+    "date": "",
+    "cover": "https://raw.githubusercontent.com/Dalcio/beautiful-to-do/main/screenshots/cover.png",
+    "name": "Beautiful Todo App",
+    "platform": "web",
+    "role": "I've created this platform to get information about the nations in the world consuming rest countries api",
+    "stack": "Next JS, Typescript, Zustand, Mantine UI, Beautiful React Drag and Drop ...",
+    "desc": "To Do is a task management app to help you stay organized and manage your day-to-day",
+    "github": "https://github.com/Dalcio/beautiful-to-do",
+    "live": "http://beautiful-to-do.vercel.app/"
+  },
+  {
+    "id": 20,
+    "date": "development",
+    "cover": "/desktop-preview.jpg",
+    "name": "Task Tracker",
+    "platform": "web",
+    "role": "I was responsible for the hole project",
+    "stack": "Next JS, Typescript, Jotai, Mantine UI, ...",
+    "desc": "A task tracker is a system that helps you make sure no tasks slip through the cracks with everything you have to do in a day.",
+    "github": "https://github.com/Dalcio/new-task-tracker",
+    "live": "https://new-task-tracker.vercel.app/"
+  }
 ]

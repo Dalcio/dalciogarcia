@@ -1,12 +1,29 @@
-import { Box, Card, createStyles, Image, SimpleGrid, Text, Title } from '@mantine/core';
-import { projects } from 'data';
-import SectionTitle from './SecrionTitle';
+import { Box, Button, Card, createStyles, Image, SimpleGrid, Stack, Tabs } from '@mantine/core';
+import { GitHubLogoIcon } from '@modulz/radix-icons';
+import { content } from 'data';
+import SectionTitle from '../SecrionTitle';
+import { ProjectCard, StyledTabs } from './Works.components';
+import { useWorks } from './Works.hooks';
 
 const useWorksStyles = createStyles((theme) => ({
   root: {
-    paddingBottom: 4 * theme.spacing.xl,
-    height: '100vh|important',
+    '& > .inner-container': {
+      display: 'grid',
+      gridTemplateRows: 'auto 1fr auto',
+    },
+  },
+  button: {
+    backgroundColor: theme.colors.primary[0],
+    marginBottom: 4 * theme.spacing.xl,
+
+    '&:hover': {
+      backgroundColor: theme.colors.primary[0],
+      opacity: 0.8,
+    },
+  },
+  projects: {
     overflow: 'auto',
+    height: '55vh',
   },
   projectCard: {
     position: 'relative',
@@ -49,34 +66,24 @@ const useWorksStyles = createStyles((theme) => ({
   },
 }));
 
-type ProjectCardProps = {
-  desc: string;
-  cover: string;
-  url: string;
-  name: string;
-};
-
-const ProjectCard = ({ cover, name, desc, url }: ProjectCardProps) => {
-  const { classes } = useWorksStyles();
-
-  return (
-    <Card component="a" href={url} className={classes.projectCard} radius="md" p={0}>
-      <Image src={cover} alt={name} width="100%" height="280px" />
-      <Box className="hover" py="xl">
-        <Title className="name">{name}</Title>
-        <Text>{desc.substring(0, 30)}</Text>
-      </Box>
-    </Card>
-  );
-};
-
 const WorksSection = () => {
   const { classes } = useWorksStyles();
+  const { works, handleWorks } = useWorks();
 
   return (
     <div className={`inner-root ${classes.root}`}>
       <div className="inner-container ">
         <SectionTitle title="My Works" />
+        <Stack align="center" mb="lg">
+          <StyledTabs onTabChange={handleWorks} defaultValue="all">
+            <Tabs.List>
+              <Tabs.Tab value="all">All</Tabs.Tab>
+              <Tabs.Tab value="web">Web</Tabs.Tab>
+              <Tabs.Tab value="mobile">Mobile</Tabs.Tab>
+              <Tabs.Tab value="others">Others</Tabs.Tab>
+            </Tabs.List>
+          </StyledTabs>
+        </Stack>
         <SimpleGrid
           cols={3}
           spacing="lg"
@@ -87,9 +94,13 @@ const WorksSection = () => {
               spacing: 'md',
             },
           ]}
+          className={classes.projects}
+          my="md"
+          px="md"
         >
-          {projects.map((project) => (
+          {works.map((project) => (
             <ProjectCard
+              className={classes.projectCard}
               desc={project.desc}
               url={project.live}
               name={project.name}
@@ -98,6 +109,19 @@ const WorksSection = () => {
             />
           ))}
         </SimpleGrid>
+        <Button
+          component="a"
+          href={content.contacts.github}
+          target="_blank"
+          fullWidth
+          radius="md"
+          size="xl"
+          rightIcon={<GitHubLogoIcon />}
+          className={classes.button}
+          mt="md"
+        >
+          See more on Github
+        </Button>
       </div>
     </div>
   );
