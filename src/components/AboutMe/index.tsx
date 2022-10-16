@@ -7,9 +7,8 @@ const useAboutMeStyles = createStyles((theme) => ({
     color: theme.black,
   },
   container: {
-    paddingTop: 4 * theme.spacing.xl,
-    paddingBottom: 4 * theme.spacing.xl,
     position: 'relative',
+    paddingBottom: 4 * theme.spacing.xl,
   },
   imageContainer: {
     // position: 'absolute',
@@ -37,8 +36,8 @@ const AboutMe = () => {
 
   return (
     <div className={`inner-root ${classes.root}`}>
-      <SectionTitle title="About Me" />
       <div className={`inner-container ${classes.container}`}>
+        <SectionTitle title="About Me" />
         {/* <div className="title">
           <Title>Dálcio Garcia</Title>
         </div>

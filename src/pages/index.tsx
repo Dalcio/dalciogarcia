@@ -1,4 +1,4 @@
-import { AboutMe, Articles, ContactMe, Home, Container, Works } from 'components';
+import { AboutMe, Articles, ContactMe, Home, Container, Works, FloatFooter } from 'components';
 
 const HomePage = () => (
   <>
@@ -8,6 +8,7 @@ const HomePage = () => (
       <Works />
       <Articles />
       <ContactMe />
+      <FloatFooter />
     </Container>
   </>
 );

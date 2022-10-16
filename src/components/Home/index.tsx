@@ -1,7 +1,5 @@
 import { createStyles, Image, keyframes, Stack, Text, Title } from '@mantine/core';
-import SocialNetWorks, { LetsTalk } from 'components/Social';
 import { content } from 'data';
-import { Row } from 'theme/restyled';
 import DalcioCharacter from './DalcioCharacter';
 import VSCode from './VSCode';
 
@@ -89,10 +87,6 @@ const Home = () => {
         <DalcioCharacter />
         <Title>Dálcio Garcia</Title>
         <Text className={classes.intro}>{content.home.intro}</Text>
-        <Row justify="space-around" align="center">
-          <SocialNetWorks />
-          <LetsTalk />
-        </Row>
         <div className={classes.vscodeContainer}>
           <VSCode className={classes.vscode} />
         </div>

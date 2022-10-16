@@ -9,7 +9,14 @@ const SectionTitle = ({ title }: SectionHeaderProps) => {
   const brokenTitle = title.split(' ');
 
   return (
-    <Row align="center" justify="center">
+    <Row
+      align="center"
+      justify="center"
+      sx={(theme) => ({
+        paddingTop: 4 * theme.spacing.xl,
+        paddingBottom: 2 * theme.spacing.xl,
+      })}
+    >
       <Title>{brokenTitle[0]}</Title>
       <Title
         sx={(theme) => ({

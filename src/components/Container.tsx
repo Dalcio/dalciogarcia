@@ -17,8 +17,9 @@ const useLayoutStyles = createStyles((theme) => ({
       justifyContent: 'center',
     },
 
-    '& >.inner-root > .inner.container': {
+    '& >.inner-root > .inner-container': {
       width: 'min(100%, 1240px)',
+      padding: theme.spacing.xl,
     },
   },
 }));
