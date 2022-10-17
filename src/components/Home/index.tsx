@@ -37,7 +37,7 @@ const useCoverStyles = createStyles((theme) => ({
     position: 'relative',
     top: '-170px',
     margin: '0 auto',
-    width: `min(calc(100% - ${2 * theme.spacing.lg}px), 760px)`,
+    width: `min(calc(100% - ${4 * theme.spacing.lg}px), 760px)`,
 
     [theme.fn.smallerThan('sm')]: {
       transform: 'scale(0.8)',
@@ -49,7 +49,7 @@ const Home = () => {
   const { classes } = useCoverStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="home">
       <Stack className={`inner-container ${classes.container}`}>
         <DalcioCharacter />
         <Title>Dálcio Garcia</Title>

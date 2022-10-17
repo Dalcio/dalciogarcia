@@ -19,6 +19,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         theme={{
           colorScheme: 'dark',
           ...theme,
+          loader: 'dots',
         }}
         withGlobalStyles
         withNormalizeCSS

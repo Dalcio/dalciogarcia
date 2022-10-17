@@ -34,6 +34,7 @@ const SectionTitle = ({ title, desc }: SectionHeaderProps) => {
         },
       })}
       className="section-title"
+      id={title.toLowerCase().replace(' ', '-')}
     >
       <Row align="center" justify="center">
         <Title>{brokenTitle[0]}</Title>

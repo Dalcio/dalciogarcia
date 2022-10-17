@@ -32,7 +32,7 @@ const ContactMe = () => {
   const { classes } = useContactMeStyles();
 
   return (
-    <div className="inner-root">
+    <div className="inner-root" id="contact-me">
       <div className="inner-container">
         <Stack align="center" justify="center" style={{ minHeight: '100vh' }}>
           <a href={content.contacts.mailto} className="lets-talk">

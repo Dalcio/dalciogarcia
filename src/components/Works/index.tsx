@@ -6,12 +6,7 @@ import { ProjectCard, StyledTabs } from './Works.components';
 import { useWorks } from './Works.hooks';
 
 const useWorksStyles = createStyles((theme) => ({
-  root: {
-    '& > .inner-container': {
-      display: 'grid',
-      gridTemplateRows: 'auto 1fr auto',
-    },
-  },
+  root: {},
   button: {
     backgroundColor: theme.colors.primary[0],
     marginBottom: 4 * theme.spacing.xl,
@@ -72,7 +67,7 @@ const WorksSection = () => {
 
   return (
     <div className={`inner-root ${classes.root}`}>
-      <div className="inner-container ">
+      <SimpleGrid cols={1} className="inner-container " spacing={0}>
         <SectionTitle title="My Works" />
         <Stack align="center" mb="lg">
           <StyledTabs onTabChange={handleWorks} defaultValue="all">
@@ -96,7 +91,6 @@ const WorksSection = () => {
           ]}
           className={classes.projects}
           my="md"
-          px="md"
         >
           {works.map((project) => (
             <ProjectCard
@@ -114,7 +108,7 @@ const WorksSection = () => {
           href={content.contacts.github}
           target="_blank"
           fullWidth
-          radius="md"
+          radius="xl"
           size="xl"
           rightIcon={<GitHubLogoIcon />}
           className={classes.button}
@@ -122,7 +116,7 @@ const WorksSection = () => {
         >
           See more on Github
         </Button>
-      </div>
+      </SimpleGrid>
     </div>
   );
 };

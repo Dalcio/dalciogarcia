@@ -7,11 +7,13 @@ import {
   Works,
   FloatFooter,
   Cover,
+  Header,
 } from 'components';
 
 const HomePage = () => (
   <>
     <Cover />
+    <Header />
     <Home />
     <Container>
       <AboutMe />

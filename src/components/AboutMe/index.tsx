@@ -1,9 +1,8 @@
-import { createStyles, SimpleGrid, Stack, Text } from '@mantine/core';
+import { Button, createStyles, SimpleGrid, Stack, Text } from '@mantine/core';
 import { GlobeIcon } from '@modulz/radix-icons';
 import { content } from 'data';
 import {
   SiAdobexd,
-  SiGooglescholar,
   SiHtml5,
   SiCss3,
   SiSass,
@@ -16,8 +15,6 @@ import {
   SiVisualstudiocode,
 } from 'react-icons/si';
 import { ImGit } from 'react-icons/im';
-import { ArticleCard } from 'components/Articles';
-import { Row } from 'theme/restyled';
 import { AboutMeComponent, MobileIcon, AboutMeCard } from './AboutMe.components';
 
 const useAboutMeStyles = createStyles((theme) => ({
@@ -49,7 +46,14 @@ const useAboutMeStyles = createStyles((theme) => ({
       width: `min(calc(100% - ${2 * theme.spacing.lg}px), 400px)`,
     },
   },
-  imageContainer: {},
+  button: {
+    backgroundColor: theme.colors.primary[0],
+
+    '&:hover': {
+      backgroundColor: theme.colors.primary[0],
+      opacity: 0.8,
+    },
+  },
   aboutContainer: {
     width: '100%',
   },
@@ -71,6 +75,11 @@ const AboutMe = () => {
         }
       >
         <Stack align="center">
+          <Button className={classes.button} component="a" download radius="xl" size="xl">
+            My Resume
+          </Button>
+        </Stack>
+        {/* <Stack align="center">
           <ArticleCard
             row={
               <Row>
@@ -83,13 +92,13 @@ const AboutMe = () => {
             title={content['about-me'].education.institute}
             desc={content['about-me'].education.course}
           />
-        </Stack>
+        </Stack> */}
       </AboutMeComponent>
 
       <AboutMeComponent
         innerRootClass={classes.root}
         innerContainerClass={classes.container}
-        title="Most Used Technologies"
+        title="Common Techs"
         titleDesc={
           <Text align="center" className="self-intro">
             {content['about-me']['my-techs']}
@@ -100,8 +109,8 @@ const AboutMe = () => {
           cols={4}
           spacing="lg"
           breakpoints={[
-            { maxWidth: 'sm', cols: 1, spacing: 'md' },
-            { maxWidth: 'md', cols: 2, spacing: 'md' },
+            { maxWidth: 'sm', cols: 2, spacing: 'md' },
+            { maxWidth: 'md', cols: 3, spacing: 'md' },
           ]}
           my="md"
           px="md"

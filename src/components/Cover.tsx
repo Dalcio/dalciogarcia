@@ -1,29 +1,29 @@
-import { Image, keyframes } from '@mantine/core';
-
-const universe = keyframes({
-  from: {
-    transform: 'scale(1)',
-  },
-  to: {
-    transform: 'scale(4)',
-  },
-});
+import { Box } from '@mantine/core';
+import Image from 'next/image';
 
 const Cover = () => (
-  <Image
-    src="/images/stars.jpg"
-    alt="universe"
-    sx={() => ({
+  <Box
+    style={{
       position: 'fixed',
-      width: '100%',
-      height: '100%',
       top: 0,
       right: 0,
-      objectFit: 'cover',
+      left: 0,
+      bottom: 0,
       opacity: 0.2,
-      animation: `${universe} 30s ease-in-out infinite alternate`,
-    })}
-  />
+    }}
+  >
+    <Image
+      src="/images/stars.jpg"
+      alt="universe"
+      objectFit="cover"
+      layout="fill"
+      style={{
+        height: '100vh',
+        width: '100vw',
+        animation: 'universe 30s ease-in-out infinite alternate',
+      }}
+    />
+  </Box>
 );
 
 export default Cover;

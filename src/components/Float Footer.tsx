@@ -1,6 +1,7 @@
 import { createStyles, Text } from '@mantine/core';
 import { ChatBubbleIcon, GitHubLogoIcon } from '@modulz/radix-icons';
 import { content } from 'data';
+import { Row } from 'theme/restyled';
 
 const LinkedinLogoIcon = () => (
   <svg width="22" height="22" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,10 +25,13 @@ const useFloatFooter = createStyles((theme) => ({
   },
   container: {
     width: 'min(100%, 1240px)',
-    paddingRight: theme.spacing.xl,
-    display: 'flex',
-    justifyContent: 'end',
-    columnGap: theme.spacing.md,
+    paddingRight: 2 * theme.spacing.xl,
+
+    [theme.fn.smallerThan('sm')]: {
+      width: `calc(100% - ${2 * theme.spacing.md}px)`,
+      paddingRight: 0,
+      margin: '0 auto',
+    },
 
     a: {
       display: 'flex',
@@ -37,6 +41,12 @@ const useFloatFooter = createStyles((theme) => ({
       color: theme.white,
       alignItems: 'center',
       padding: `${theme.spacing.sm}px ${theme.spacing.xl}px`,
+
+      [theme.fn.smallerThan('sm')]: {
+        '&:nth-of-type(2)': {
+          margin: `0 ${theme.spacing.xs}px`,
+        },
+      },
 
       '&:hover': {
         transition: 'opacity 200ms ease-in-out',
@@ -62,7 +72,7 @@ const FloatFooter = () => {
 
   return (
     <div className={classes.wrapper}>
-      <div className={classes.container}>
+      <Row justify="end" spacing="md" className={classes.container}>
         <a
           className={classes.gitHub}
           href={content.contacts.github}
@@ -82,7 +92,7 @@ const FloatFooter = () => {
         <a className={classes.letTalk} href={content.contacts.mailto}>
           <ChatBubbleIcon /> <Text>Let&apos;s talk</Text>
         </a>
-      </div>
+      </Row>
     </div>
   );
 };

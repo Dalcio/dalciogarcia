@@ -47,10 +47,10 @@ export const AboutMeCard = ({ icon, desc, name }: AboutMeCardProps) => (
     })}
   >
     <div className="icon">{icon}</div>
-    <Text size="lg" className="name" weight={700}>
+    <Text size="lg" align="center" className="name" weight={700}>
       {name}
     </Text>
-    <Text>{desc}</Text>
+    <Text align="center">{desc}</Text>
   </Stack>
 );
 

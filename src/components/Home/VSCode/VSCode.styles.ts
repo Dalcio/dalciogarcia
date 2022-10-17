@@ -11,7 +11,7 @@ export const lineAnimation = keyframes({
 
 export const useVSCodeStyles = createStyles((theme) => ({
   container: {
-    width: `min(calc(100% - ${2 * theme.spacing.lg}px), 760px)`,
+    width: `min(calc(100% - ${4 * theme.spacing.lg}px), 760px)`,
     border: `1px solid ${theme.white}`,
     borderRadius: theme.radius.md,
     overflow: 'hidden',

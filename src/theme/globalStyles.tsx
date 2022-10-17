@@ -16,7 +16,7 @@ const GlobalStyles = () => (
       },
 
       '*::-webkit-scrollbar': {
-        width: '10px',
+        width: '3px',
       },
 
       '*::-webkit-scrollbar-track': {
@@ -39,6 +39,15 @@ const GlobalStyles = () => (
       a: {
         textDecoration: 'unset',
         color: colors.primary[0],
+      },
+
+      '@keyframes universe': {
+        from: {
+          transform: 'scale(1)',
+        },
+        to: {
+          transform: 'scale(4)',
+        },
       },
     })}
   />
