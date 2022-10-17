@@ -12,7 +12,6 @@ import {
   SiNodedotjs,
   SiReact,
   SiFigma,
-  SiVisualstudiocode,
 } from 'react-icons/si';
 import { ImGit } from 'react-icons/im';
 import { AboutMeComponent, MobileIcon, AboutMeCard } from './AboutMe.components';
@@ -75,24 +74,18 @@ const AboutMe = () => {
         }
       >
         <Stack align="center">
-          <Button className={classes.button} component="a" download radius="xl" size="xl">
+          <Button
+            className={classes.button}
+            component="a"
+            download
+            href="/dalcio.pdf"
+            target="_blank"
+            radius="xl"
+            size="xl"
+          >
             My Resume
           </Button>
         </Stack>
-        {/* <Stack align="center">
-          <ArticleCard
-            row={
-              <Row>
-                <SiGooglescholar width="24px" height="24px" />
-                <Text>Education</Text>
-              </Row>
-            }
-            date={content['about-me'].education.date}
-            link={content['about-me'].education.link}
-            title={content['about-me'].education.institute}
-            desc={content['about-me'].education.course}
-          />
-        </Stack> */}
       </AboutMeComponent>
 
       <AboutMeComponent
@@ -123,8 +116,8 @@ const AboutMe = () => {
           <AboutMeCard icon={<SiNodedotjs size={26} />} name="Node JS" />
           <AboutMeCard icon={<SiReact size={26} />} name="React JS" />
           <AboutMeCard icon={<SiNextdotjs size={26} />} name="Next Js" />
+          <AboutMeCard icon={<SiReact size={26} />} name="React Native / Expo" />
           <AboutMeCard icon={<ImGit size={26} />} name="Git" />
-          <AboutMeCard icon={<SiVisualstudiocode size={26} />} name="VS Code" />
           <AboutMeCard icon={<SiFigma size={26} />} name="Figma" />
           <AboutMeCard icon={<SiAdobexd size={26} />} name="Adobe XD" />
         </SimpleGrid>
@@ -145,9 +138,13 @@ const AboutMe = () => {
           <AboutMeCard
             icon={<GlobeIcon width="24px" height="24px" />}
             name="Web Development"
-            desc=""
+            desc="I use develop web applications thinking in the UI/UX bringing awesome solutions"
           />
-          <AboutMeCard icon={<MobileIcon />} name="Mobile Development" desc="" />
+          <AboutMeCard
+            icon={<MobileIcon />}
+            name="Mobile Development"
+            desc="I use to create cross platform mobile"
+          />
         </SimpleGrid>
       </AboutMeComponent>
     </>

@@ -16,7 +16,11 @@ const GlobalStyles = () => (
       },
 
       '*::-webkit-scrollbar': {
-        width: '3px',
+        width: '6px',
+
+        '@media screen and (hover:none)': {
+          width: '3px',
+        },
       },
 
       '*::-webkit-scrollbar-track': {
@@ -26,10 +30,10 @@ const GlobalStyles = () => (
       },
 
       '*::-webkit-scrollbar-track:hover': {
-        background: '#78797a',
+        background: 'white',
       },
       '*::-webkit-scrollbar-thumb': {
-        background: 'white',
+        background: colors.primary[0],
       },
 
       '.scroll-bar::-webkit-scrollbar-thumb:hover': {
