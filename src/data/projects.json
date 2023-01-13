@@ -8,7 +8,7 @@
     "stack": "Angular, Typescript",
     "desc": "This is a solution to the Easybank landing page challenge on Frontend Mentor",
     "github": "https://github.com/Dalcio/easy-bank",
-    "live": "https://easy-bank-tau.vercel.app/"
+    "url": "https://easy-bank-tau.vercel.app/"
   },
   {
     "id": 1,
@@ -19,7 +19,7 @@
     "stack": "Angular, Typescript",
     "desc": "A countdown timer is a virtual clock that counts down from a certain number or date to indicate the beginning or end of an event or offer.",
     "github": "https://github.com/Dalcio/launch-countdown-timer",
-    "live": "https://launch-countdown-timer-nine-tau.vercel.app/"
+    "url": "https://launch-countdown-timer-nine-tau.vercel.app/"
   },
   {
     "id": 2,
@@ -30,7 +30,7 @@
     "stack": "Angular, Typescript",
     "desc": "Filter the jobs by category",
     "github": "https://github.com/Dalcio/static-job-listings.git",
-    "live": "https://static-job-listings-umber.vercel.app/"
+    "url": "https://static-job-listings-umber.vercel.app/"
   },
   {
     "id": 3,
@@ -42,7 +42,7 @@
     "stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
     "desc": "Rock Paper Scissors Lizard Spock is an extension of the classic game of chance, Rock Paper Scissors, created by Sam Kass and Karen Bryla.",
     "github": "https://github.com/Dalcio/rock-paper-scissors",
-    "live": "https://rock-paper-scissors-flax-eight.vercel.app/"
+    "url": "https://rock-paper-scissors-flax-eight.vercel.app/"
   },
   {
     "id": 4,
@@ -54,7 +54,7 @@
     "stack": "Next JS, Typescript, Stiches",
     "desc": "Advice Generator App allows the user to see random advice",
     "github": "https://github.com/Dalcio/advice-generator-app",
-    "live": "https://get-advice.vercel.app/"
+    "url": "https://get-advice.vercel.app/"
   },
   {
     "id": 5,
@@ -66,7 +66,7 @@
     "stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
     "desc": "World's Nation Info is a platform where we can get some information's about an specific country in the world such as the name of the country, their capital or capitals, their top level domain, the population size and more..",
     "github": "https://github.com/Dalcio/world-nations-info",
-    "live": "https://world-nations-info.vercel.app/"
+    "url": "https://world-nations-info.vercel.app/"
   },
   {
     "id": 6,
@@ -78,7 +78,7 @@
     "stack": "Next JS, Typescript, Zustand, Mantine UI, ...",
     "desc": "Shortify your link in a click with url shortening..",
     "github": "https://github.com/Dalcio/url-shortening",
-    "live": "https://link-shortening.vercel.app/"
+    "url": "https://link-shortening.vercel.app/"
   },
   {
     "id": 7,
@@ -90,7 +90,7 @@
     "stack": "Next JS, Typescript, Stiches, Leaflet ...",
     "desc": "Find everything about your ip or domain in a seconds including your location inreal time.",
     "github": "https://github.com/Dalcio/track-this-ip-address",
-    "live": "https://track-this-ip-address.vercel.app/"
+    "url": "https://track-this-ip-address.vercel.app/"
   },
   {
     "id": 8,
@@ -102,6 +102,6 @@
     "stack": "Next JS, Typescript, Zustand, Mantine UI, Beautiful React Drag and Drop ...",
     "desc": "To Do is a task management app to help you stay organized and manage your day-to-day",
     "github": "https://github.com/Dalcio/beautiful-to-do",
-    "live": "http://beautiful-to-do.vercel.app/"
+    "url": "http://beautiful-to-do.vercel.app/"
   }
 ]

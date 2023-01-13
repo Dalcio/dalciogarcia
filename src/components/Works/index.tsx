@@ -1,8 +1,11 @@
-import { Button, createStyles, SimpleGrid, Stack, Tabs } from '@mantine/core';
+import { Button, createStyles, Modal, SimpleGrid } from '@mantine/core';
 import { GitHubLogoIcon } from '@modulz/radix-icons';
+import { Row } from 'theme/restyled';
+import { Carousel } from '@mantine/carousel';
+import { useDisclosure } from '@mantine/hooks';
 import { content } from 'data';
 import SectionTitle from '../SectionTitle';
-import { ProjectCard, StyledTabs } from './Works.components';
+import { ProjectCard } from './Works.components';
 import { useWorks } from './Works.hooks';
 
 const useWorksStyles = createStyles((theme) => ({
@@ -18,105 +21,110 @@ const useWorksStyles = createStyles((theme) => ({
   },
   projects: {
     overflow: 'auto',
-    height: '55vh',
-  },
-  projectCard: {
-    position: 'relative',
-    border: '1px solid transparent',
-    height: '280px',
-
-    img: {
-      transition: 'transform 400ms ease-in-out',
-      objectFit: 'cover',
-    },
-
-    '.hover': {
-      display: 'none',
-      position: 'absolute',
-      inset: 0,
-      background: 'rgba(0,0,0,0.8)',
-      transition: 'display 200ms ease-in-out',
-    },
-
-    ':hover': {
-      borderColor: theme.colors.primary[0],
-
-      img: {
-        transform: 'scale(1.3)',
-      },
-
-      '.hover': {
-        display: 'flex',
-        justifyContent: 'center',
-        rowGap: theme.spacing.md,
-        flexDirection: 'column',
-        padding: theme.spacing.xl,
-        textAlign: 'left',
-
-        '.name': {
-          color: theme.colors.primary[0],
-        },
-      },
-    },
+    height: 'calc(100vh - 280px)',
   },
 }));
 
 const WorksSection = () => {
+  const [opened, { close, open }] = useDisclosure(false);
   const { classes } = useWorksStyles();
-  const { works, handleWorks } = useWorks();
+  const { selectedProjects, projects } = useWorks([1, 3, 2, 6, 0]);
 
   return (
     <div className={`inner-root ${classes.root}`}>
-      <SimpleGrid cols={1} className="inner-container " spacing={0}>
-        <SectionTitle title="My Works" />
-        <Stack align="center" mb="lg">
-          <StyledTabs onTabChange={handleWorks} defaultValue="all">
-            <Tabs.List>
-              <Tabs.Tab value="all">All</Tabs.Tab>
-              <Tabs.Tab value="web">Web</Tabs.Tab>
-              <Tabs.Tab value="mobile">Mobile</Tabs.Tab>
-              <Tabs.Tab value="others">Others</Tabs.Tab>
-            </Tabs.List>
-          </StyledTabs>
-        </Stack>
-        <SimpleGrid
-          cols={3}
-          spacing="lg"
-          breakpoints={[
-            {
-              maxWidth: 'sm',
-              cols: 1,
-              spacing: 'md',
+      <div className="inner-container">
+        <SectionTitle title="What I built" />
+        <Row>
+          <Carousel
+            slideSize="50%"
+            containScroll="trimSnaps"
+            height={290}
+            slideGap="md"
+            loop
+            dragFree
+            withIndicators
+            align="center"
+            slidesToScroll={1}
+            initialSlide={2}
+            styles={{
+              root: { width: 'min(100%, 1240px)' },
+              indicator: {
+                width: 12,
+                height: 4,
+                transition: 'width 250ms ease',
+                '&[data-active]': { width: 40 },
+              },
+            }}
+          >
+            {selectedProjects.map((project) => (
+              <Carousel.Slide key={project.id}>
+                <ProjectCard {...project} />
+              </Carousel.Slide>
+            ))}
+          </Carousel>
+        </Row>
+        <Row justify="center" mt="lg">
+          <Button onClick={open} radius="xl" size="xl" className={classes.button}>
+            View Showcases
+          </Button>
+        </Row>
+        <Modal
+          opened={opened}
+          onClose={close}
+          size="min(100%, 1240px)"
+          styles={{
+            modal: {
+              height: 'calc(100vh - 100px)',
+              overflow: 'hidden',
             },
-          ]}
-          className={classes.projects}
-          my="md"
+            title: {
+              flexGrow: 1,
+            },
+          }}
+          title={
+            <Row
+              justify="center"
+              sx={{
+                width: '100%',
+                '> div': {
+                  paddingTop: 0,
+                  paddingBottom: 0,
+                },
+              }}
+            >
+              <SectionTitle title="My Showcases" />
+            </Row>
+          }
         >
-          {works.map((project) => (
-            <ProjectCard
-              className={classes.projectCard}
-              desc={project.desc}
-              url={project.live}
-              name={project.name}
-              cover={project.cover}
-              key={project.id}
-            />
-          ))}
-        </SimpleGrid>
-        <Button
-          component="a"
-          href={content.contacts.github}
-          target="_blank"
-          fullWidth
-          radius="xl"
-          size="xl"
-          rightIcon={<GitHubLogoIcon />}
-          className={classes.button}
-          mt="md"
-        >
-          See more on Github
-        </Button>
-      </SimpleGrid>
+          <SimpleGrid
+            cols={3}
+            spacing="lg"
+            breakpoints={[
+              { maxWidth: 'sm', cols: 1, spacing: 'md' },
+              { maxWidth: 'md', cols: 2, spacing: 'md' },
+            ]}
+            className={classes.projects}
+            my="md"
+          >
+            {projects.map((project) => (
+              <ProjectCard {...project} key={project.id} />
+            ))}
+          </SimpleGrid>
+          <Button
+            component="a"
+            href={content.contacts.github}
+            target="_blank"
+            fullWidth
+            radius="xl"
+            size="xl"
+            rightIcon={<GitHubLogoIcon />}
+            className={classes.button}
+            mt="md"
+          >
+            See more on Github
+          </Button>
+        </Modal>
+      </div>
     </div>
   );
 };

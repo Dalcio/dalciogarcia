@@ -15,11 +15,9 @@ const Cover = () => (
     <Image
       src="/images/stars.jpg"
       alt="universe"
-      objectFit="cover"
-      layout="fill"
+      fill
       style={{
-        height: '100vh',
-        width: '100vw',
+        objectFit: 'cover',
         animation: 'universe 30s ease-in-out infinite alternate',
       }}
     />

@@ -3,26 +3,21 @@ import { useState } from 'react';
 
 type PlatformsType = 'all' | 'web' | 'mobile' | 'others';
 
-export const useWorks = () => {
+export const useWorks = (projectsToShowIdx?: number[]) => {
   const [works, setWorks] = useState([...projects]);
 
-  const handleWorks = (currentTab: PlatformsType) => {
-    let newWorks: typeof projects;
-
-    if (currentTab === 'all') {
-      newWorks = [...projects];
-    } else if (currentTab === 'mobile') {
-      newWorks = projects.filter((p) => p.platform.toLowerCase() === 'mobile');
-    } else if (currentTab === 'web') {
-      newWorks = projects.filter((p) => p.platform.toLowerCase() === 'web');
-    } else {
-      newWorks = projects.filter(
-        (p) => p.platform.toLowerCase() !== 'mobile' && p.platform.toLowerCase() !== 'web'
-      );
-    }
+  const handleWorks = (currentTab: PlatformsType = 'all') => {
+    const newWorks: typeof projects =
+      currentTab === 'all'
+        ? [...projects]
+        : projects.filter((p) => p.platform.toLowerCase() === currentTab);
 
     setWorks([...newWorks]);
   };
 
-  return { handleWorks, works };
+  return {
+    handleWorks,
+    selectedProjects: !projectsToShowIdx ? works : projectsToShowIdx.map((p) => works[p]),
+    projects: works,
+  };
 };
