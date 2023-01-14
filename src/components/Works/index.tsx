@@ -36,7 +36,7 @@ const WorksSection = () => {
         <SectionTitle title="What I built" />
         <Row>
           <Carousel
-            slideSize="50%"
+            slideSize="max(300px, 50%)"
             containScroll="trimSnaps"
             height={290}
             slideGap="md"
