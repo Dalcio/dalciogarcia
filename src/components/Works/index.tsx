@@ -1,4 +1,4 @@
-import { Button, createStyles, Modal, SimpleGrid } from '@mantine/core';
+import { Button, Modal, SimpleGrid } from '@mantine/core';
 import { GitHubLogoIcon } from '@modulz/radix-icons';
 import { Row } from 'theme/restyled';
 import { Carousel } from '@mantine/carousel';
@@ -8,30 +8,12 @@ import SectionTitle from '../SectionTitle';
 import { ProjectCard } from './Works.components';
 import { useWorks } from './Works.hooks';
 
-const useWorksStyles = createStyles((theme) => ({
-  root: {},
-  button: {
-    backgroundColor: theme.colors.primary[0],
-    marginBottom: 4 * theme.spacing.xl,
-
-    '&:hover': {
-      backgroundColor: theme.colors.primary[0],
-      opacity: 0.8,
-    },
-  },
-  projects: {
-    overflow: 'auto',
-    height: 'calc(100vh - 280px)',
-  },
-}));
-
 const WorksSection = () => {
   const [opened, { close, open }] = useDisclosure(false);
-  const { classes } = useWorksStyles();
   const { selectedProjects, projects } = useWorks([1, 3, 2, 6, 0]);
 
   return (
-    <div className={`inner-root ${classes.root}`}>
+    <div className="inner-root">
       <div className="inner-container">
         <SectionTitle title="What I built" />
         <Row>
@@ -64,7 +46,15 @@ const WorksSection = () => {
           </Carousel>
         </Row>
         <Row justify="center" mt="lg">
-          <Button onClick={open} radius="xl" size="xl" className={classes.button}>
+          <Button
+            onClick={open}
+            radius="xl"
+            size="xl"
+            className="button"
+            sx={({ spacing }) => ({
+              marginBottom: 4 * spacing.xl,
+            })}
+          >
             View Showcases
           </Button>
         </Row>
@@ -103,7 +93,10 @@ const WorksSection = () => {
               { maxWidth: 'sm', cols: 1, spacing: 'md' },
               { maxWidth: 'md', cols: 2, spacing: 'md' },
             ]}
-            className={classes.projects}
+            style={{
+              overflow: 'auto',
+              height: 'calc(100vh - 280px)',
+            }}
             my="md"
           >
             {projects.map((project) => (
@@ -118,7 +111,7 @@ const WorksSection = () => {
             radius="xl"
             size="xl"
             rightIcon={<GitHubLogoIcon />}
-            className={classes.button}
+            className="button"
             mt="md"
           >
             See more on Github

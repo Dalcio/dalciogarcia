@@ -1,5 +1,7 @@
-import { Box, createStyles, SimpleGrid, Text } from '@mantine/core';
+import { Box, Button, createStyles, SimpleGrid, Text } from '@mantine/core';
 import { articles } from 'data';
+import { Row } from 'theme/restyled';
+import Link from 'next/link';
 import SectionTitle from './SectionTitle';
 
 type ArticleCardProps = {
@@ -105,6 +107,12 @@ const Articles = () => {
             />
           ))}
         </SimpleGrid>
+
+        <Row justify="center" mt="lg">
+          <Button component={Link} href="/blog" radius="xl" size="xl" className="button" mt="lg">
+            View My Blog
+          </Button>
+        </Row>
       </div>
     </div>
   );

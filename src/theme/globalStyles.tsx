@@ -45,6 +45,16 @@ const GlobalStyles = () => (
         color: colors.primary[0],
       },
 
+      '.button': {
+        backgroundColor: colors.primary[0],
+        color: 'white!important',
+
+        '&:hover': {
+          backgroundColor: colors.primary[0],
+          opacity: 0.8,
+        },
+      },
+
       '@keyframes universe': {
         from: {
           transform: 'scale(1)',
