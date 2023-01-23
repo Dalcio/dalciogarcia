@@ -4,12 +4,13 @@ import { Row } from 'theme/restyled';
 import Link from 'next/link';
 import SectionTitle from './SectionTitle';
 
-type ArticleCardProps = {
+export type ArticleCardProps = {
   desc: string;
   title: string;
   date: string;
   link: string;
   row?: JSX.Element;
+  _noBlank?: boolean;
 };
 
 const useArticlesStyles = createStyles((theme) => ({
@@ -20,9 +21,9 @@ const useArticlesStyles = createStyles((theme) => ({
   },
 }));
 
-export const ArticleCard = ({ desc, row, date, title, link }: ArticleCardProps) => (
+export const ArticleCard = ({ desc, row, date, title, link, _noBlank }: ArticleCardProps) => (
   <Box
-    component="a"
+    component={Link}
     href={link}
     sx={(theme) => ({
       padding: theme.spacing.lg,
@@ -69,7 +70,7 @@ export const ArticleCard = ({ desc, row, date, title, link }: ArticleCardProps) 
         },
       },
     })}
-    target="_blank"
+    target={(!_noBlank && '_blank') || undefined}
   >
     {row && <header>{row}</header>}
     <Text>{date}</Text>
