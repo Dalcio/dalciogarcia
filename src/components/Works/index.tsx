@@ -15,7 +15,7 @@ const WorksSection = () => {
   return (
     <div className="inner-root">
       <div className="inner-container">
-        <SectionTitle title="What I built" />
+        <SectionTitle title="Free time projects" />
         <Row>
           <Carousel
             slideSize="max(300px, 50%)"

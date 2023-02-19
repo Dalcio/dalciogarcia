@@ -3,16 +3,15 @@ import { GetStaticProps } from 'next';
 import { useState } from 'react';
 import { ArticleCard, ArticleCardProps } from 'components/Articles';
 import { BiSearch } from 'react-icons/bi';
-import { useWindowScroll } from '@mantine/hooks';
 import { useBlogStyles } from 'views/blog/blog.styles';
 import { BlogHeader } from 'views/blog/blog-header';
 import { BlogProps } from 'views/blog/blog.types';
+import { allArticles } from 'data';
 
 export default function Blog({ articles }: BlogProps) {
   const { classes } = useBlogStyles();
   const [filteredArticles, setFilteredArticles] = useState<ArticleCardProps[]>([]);
   const items: ArticleCardProps[] = (filteredArticles.length && filteredArticles) || articles;
-  const [scroll] = useWindowScroll();
 
   const onSearching = (search: string) => {
     const tempArticles = articles.filter(
@@ -26,7 +25,7 @@ export default function Blog({ articles }: BlogProps) {
 
   return (
     <Stack className={classes.root} spacing={0}>
-      <BlogHeader className={(scroll.y > 50 && classes.headerAfterScroll) || classes.header}>
+      <BlogHeader className={classes.header}>
         <Box className={classes.searchInputContainer}>
           <div className="inner-root">
             <div className="inner-container">
@@ -46,7 +45,7 @@ export default function Blog({ articles }: BlogProps) {
           <Stack className="inner-container">
             <Stack mt="20px">
               {items.map((article) => (
-                <ArticleCard key={article.link} {...article} _noBlank />
+                <ArticleCard key={article.link} {...article} />
               ))}
             </Stack>
           </Stack>
@@ -56,17 +55,8 @@ export default function Blog({ articles }: BlogProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps = () => {
-  const articles: ArticleCardProps[] = Array.from({ length: 20 }).map((v, idx) => ({
-    date: new Date().toString(),
-    desc: `Article ${idx}`,
-    link: `/blog/article/${idx}`,
-    title: `Article ${idx}`,
-  }));
-
-  return {
-    props: {
-      articles,
-    },
-  };
-};
+export const getStaticProps: GetStaticProps = async () => ({
+  props: {
+    articles: allArticles,
+  },
+});

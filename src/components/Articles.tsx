@@ -2,6 +2,7 @@ import { Box, Button, createStyles, SimpleGrid, Text } from '@mantine/core';
 import { articles } from 'data';
 import { Row } from 'theme/restyled';
 import Link from 'next/link';
+import { v4 as uuid } from 'uuid';
 import SectionTitle from './SectionTitle';
 
 export type ArticleCardProps = {
@@ -10,7 +11,6 @@ export type ArticleCardProps = {
   date: string;
   link: string;
   row?: JSX.Element;
-  _noBlank?: boolean;
 };
 
 const useArticlesStyles = createStyles((theme) => ({
@@ -21,10 +21,11 @@ const useArticlesStyles = createStyles((theme) => ({
   },
 }));
 
-export const ArticleCard = ({ desc, row, date, title, link, _noBlank }: ArticleCardProps) => (
+export const ArticleCard = ({ desc, row, date, title, link }: ArticleCardProps) => (
   <Box
-    component={Link}
+    component="a"
     href={link}
+    target="_blank"
     sx={(theme) => ({
       padding: theme.spacing.lg,
       borderRadius: theme.radius.md,
@@ -70,7 +71,6 @@ export const ArticleCard = ({ desc, row, date, title, link, _noBlank }: ArticleC
         },
       },
     })}
-    target={(!_noBlank && '_blank') || undefined}
   >
     {row && <header>{row}</header>}
     <Text>{date}</Text>
@@ -104,7 +104,7 @@ const Articles = () => {
               date={article.date}
               desc={article.desc}
               link={article.link}
-              key={article.link}
+              key={uuid()}
             />
           ))}
         </SimpleGrid>
