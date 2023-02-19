@@ -16,8 +16,8 @@ export type ArticleCardProps = {
 const useArticlesStyles = createStyles((theme) => ({
   root: {
     background: theme.white,
-    paddingBottom: 4 * theme.spacing.xl,
     color: theme.black,
+    paddingBottom: 4 * theme.spacing.xl,
   },
 }));
 

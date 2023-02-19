@@ -8,6 +8,7 @@ import {
   FloatFooter,
   Cover,
   Header,
+  Companies,
 } from 'components';
 
 const HomePage = () => (
@@ -19,6 +20,7 @@ const HomePage = () => (
       <AboutMe />
       <Works />
       <Articles />
+      <Companies />
       <ContactMe />
       <FloatFooter />
     </Container>

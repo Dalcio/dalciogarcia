@@ -3,14 +3,18 @@ import { ArrowTopRightIcon } from '@modulz/radix-icons';
 import { content } from 'data';
 
 const useContactMeStyles = createStyles((theme) => ({
+  root: {
+    backgroundColor: theme.white,
+    color: theme.black,
+  },
   letsTalk: {
-    color: theme.white,
+    color: theme.black,
 
     [theme.fn.largerThan('sm')]: {
       padding: 3 * theme.spacing.xl,
       borderSpacing: theme.spacing.xl,
       borderRadius: '100%',
-      border: `1px solid ${theme.white}`,
+      border: `1px solid ${theme.black}`,
     },
 
     '&:hover': {
@@ -32,7 +36,7 @@ const ContactMe = () => {
   const { classes } = useContactMeStyles();
 
   return (
-    <div className="inner-root" id="contact-me">
+    <div className={`inner-root ${classes.root}`} id="contact-me">
       <div className="inner-container">
         <Stack align="center" justify="center" style={{ minHeight: '100vh' }}>
           <a href={content.contacts.mailto} className="lets-talk">
