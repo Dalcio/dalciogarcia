@@ -98,7 +98,7 @@ const Articles = () => {
             },
           ]}
         >
-          {articles.map((article) => (
+          {articles.slice(0, 6).map((article) => (
             <ArticleCard
               title={article.name}
               date={article.date}
